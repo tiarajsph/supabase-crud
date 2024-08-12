@@ -1,10 +1,10 @@
 import express from "express";
 import env from "dotenv";
-import cors from "cors";
+import cors from "cors"; //helps manage cross-origin requests 
 
-import { createClient } from "@supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";//function to create a Supabase client for interacting with your database.
 
-env.config();
+env.config();// loads environment variables from a .env file 
 
 const supabase = createClient(process.env.DATABASE_URL, process.env.DATABASE_KEY);
 
